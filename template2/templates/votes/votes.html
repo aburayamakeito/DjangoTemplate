@@ -1,0 +1,19 @@
+{% extends 'admin/base.html' %}
+<!--
+ 静的ファイルのURLを生成するstaticは
+ 個々のページで読み込むことが必要
+ -->
+{% load static %}
+
+{% block title %}ぶーの備忘録ラボ{% endblock %}
+
+{% block css %}{% endblock %}
+
+<!-- Main Content -->
+{% block content %}
+  <!-- コンテンツメッセージ -->
+  <div class="content-comment">
+    <div class="com-1">～Votes～</div>
+    <div class="com-2">Votes</div>
+  </div>
+{% endblock %}

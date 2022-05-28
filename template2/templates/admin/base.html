@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<!-- Created By CodingNepal - www.codingnepalweb.com -->
+<html lang="{{ LANGUAGE_CODE|default:'ja' }}" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <!--------- <title>Responsive Navigation Menu</tite>------>
+    <link href={% static 'admin/css/base.css' %} rel="stylesheet" />
+    {% block css %}{% endblock %}
+  </head>
+<body>
+    <nav>
+      <div class="logo" onclick="location.href='{% url 'polls:polls' %}'">
+        <img class="nav-img" src={% static 'admin/assets/buu.png' %} alt="..." />
+        <a href="{% url 'polls:polls' %}">BuuLab</a>
+      </div>
+    </nav>
+
+  <!-- Main Content -->
+  {% block content %}{% endblock %}
+
+  <!-- Footer -->
+  <footer class="footer text-faded text-center">
+    <div class="container"><p class="m-0 small">Copyright &copy; Your Website 2021</p></div>
+  </footer>
+
+  <!-- Core theme JS-->
+  <script src={% static js %}></script>
+</body>
+</html>
